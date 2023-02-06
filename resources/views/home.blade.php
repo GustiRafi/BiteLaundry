@@ -1,48 +1,6 @@
 @extends('layouts.dashboard')
 
 @section('content')
-{{-- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('stat@extends('layouts.app')
-
-                    @section('content')
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8">
-                                <div class="card">
-                                    <div class="card-header">{{ __('Dashboard') }}</div>
-                    
-                                    <div class="card-body">
-                                        @if (session('status'))
-                                            <div class="alert alert-success" role="alert">
-                                                {{ session('status') }}
-                                            </div>
-                                        @endif
-                    
-                                        {{ __('You are logged in!') }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endsection
-                    us'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
 <section class="content">
     <div class="block-header">
         <div class="row">
@@ -110,7 +68,8 @@
                 </div>
             </div>
         </div>
-        <div class="row clearfix">
+    </div>
+        {{--<div class="row clearfix">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="header">
@@ -394,6 +353,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </section>
 @endsection

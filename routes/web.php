@@ -21,6 +21,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// cek Status Laundry
+Route::get('/cek-status',[App\Http\Controllers\landingController::class,'cekstatus']);
+
 Route::middleware('auth')->group(function(){
     Route::resource('/account',App\Http\Controllers\userController::class);
     Route::resource('/outlet',App\Http\Controllers\outletController::class);
@@ -48,5 +51,12 @@ Route::middleware('auth')->group(function(){
     Route::get('/invoice-transaksi/{kode_invoice}',[App\Http\Controllers\notaController::class,'index']);
 
     // pembayaran
-    Route::get('pembayaran/{kode_invoice}',[App\Http\Controllers\transaksiController::class,'pembayaran']);
+    Route::post('pembayaran/{id}',[App\Http\Controllers\transaksiController::class,'pembayaran']);
+
+    // status laundry
+    Route::post('status/{id}',[App\Http\Controllers\transaksiController::class,'status']);
+
+    // laporan
+    Route::get('/laporan',[App\Http\Controllers\laporanController::class,'index'])->name('laporan');
+    Route::post('/get-laporan',[App\Http\Controllers\laporanController::class,'getlaporan']);
 });

@@ -23,37 +23,6 @@ class transaksiController extends Controller
         ]);
     }
 
-    // public function transaksiindex()
-    // {
-    //     return view('buat-transaksi',[
-    //         'members' => member::all(),
-    //         'outlets' => outlet::all(),
-    //     ]);
-    // }
-
-    // public function get_paket(Request $req)
-    // {
-    //     $paket = paket::where('id_outlet',$req->paket)->get();
-    //     $count = count($paket);
-    //     $output="";
-
-    //     if($count == 0)
-    //     {
-    //         $output .= '<p>Outlet ini tidak memiliki paket tersedia</p>';
-    //     }
-
-    //     foreach($paket as $row)
-    //     {
-    //         $output .= '<div class="form-check form-check-inline">
-    //         <input class="form-check-input" type="radio" name="id_paket" id="paket'. $row->id .'" value="'. $row->id .'">
-    //         <label class="form-check-label" for="paket'. $row->id .'">'. $row->nama .'</label>
-    //     </div>';
-    //     }
-
-    //     return response($output);
-
-    // }
-
     public function store(Request $req)
     {
         $validate = $req->validate([
@@ -158,10 +127,28 @@ class transaksiController extends Controller
         
     }
 
-    public function pembayaran($kode)
+    public function pembayaran(Request $req,$id)
     {
-        return view('pembayaran',[
-            'transaksi' => transaksi::where('kode_invoice',$kode)->first()
-        ]);
+        $data['dibayar'] = $req->dibayar;
+        $data['tanggal_bayar'] = now();
+        transaksi::where('id',$id)->update($data);
+
+        return response('success');
+    }
+
+    public function status(Request $req,$id)
+    {
+        $data['status'] = $req->status;
+        $transaksi = transaksi::find($id);
+
+        if($req->status == 'diambil')
+        {
+            transaksi::where('id',$id)->delete();
+            return redirect()->back()->with('success','Laundry ' . $transaksi->kode_invoice . ' baru saja diambil');
+        }else{
+            transaksi::where('id',$id)->update($data);
+            return redirect()->back()->with('success','Laundry ' . $transaksi->kode_invoice . ' sedang dalam proses selanjutnya');
+        }
+
     }
 }

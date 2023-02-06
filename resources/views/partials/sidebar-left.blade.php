@@ -21,9 +21,13 @@
             <li class="@if(Route::is('membership.index')) active @endif open"><a href="/membership"><i class="zmdi zmdi-accounts"></i><span>Membership</span></a></li>
             <li class="@if(Route::is('outlet.index')) active @endif open"><a href="/outlet"><i class="zmdi zmdi-window-maximize"></i><span>Outlets</span></a></li>
             <li class="@if(Route::is('paket.index')) active @endif open"><a href="/paket"><i class="zmdi zmdi-shopping-basket"></i><span>Paket Laundry</span></a></li>
-            <li class="@if(Route::is('buat-transaksi')) active @endif open"><a href="/buat-transaksi"><i class="zmdi zmdi-plus-circle"></i><span>Transaksi</span></a></li>
             <li class="@if(Route::is('transaksi')) active @endif open"><a href="/transaksi"><i class="zmdi zmdi-time-interval"></i><span>Riwayat Transaksi</span></a></li>
             @endcan
+            @can('kasir')
+            <li class="@if(Route::is('membership.index')) active @endif open"><a href="/membership"><i class="zmdi zmdi-accounts"></i><span>Membership</span></a></li>
+            <li class="@if(Route::is('transaksi')) active @endif open"><a href="/transaksi"><i class="zmdi zmdi-time-interval"></i><span>Riwayat Transaksi</span></a></li>
+            @endcan
+            <li class="@if(Route::is('laporan')) active @endif open"><a href="/laporan"><i class="zmdi zmdi-archive"></i><span>Buat Laporan</span></a></li>
         </ul>
     </div>
 </aside>
