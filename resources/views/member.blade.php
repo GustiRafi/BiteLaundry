@@ -5,11 +5,10 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Jquery DataTables</h2>
+                    <h2>Membership</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a></li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
-                        <li class="breadcrumb-item active">Normal Tables</li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Bite Laundry</a></li>
+                        <li class="breadcrumb-item active">Daftar Member</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
                             class="zmdi zmdi-sort-amount-desc"></i></button>
@@ -70,7 +69,7 @@
                         <div class="body">
                             <div class="table-responsive" id="datamember">
                                 <table
-                                    class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                    class="table table-bordered table-striped table-hover  dataTable js-exportable">
                                     <thead>
                                         <tr>
                                             <th>No</th>

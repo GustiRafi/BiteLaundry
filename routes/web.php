@@ -59,4 +59,5 @@ Route::middleware('auth')->group(function(){
     // laporan
     Route::get('/laporan',[App\Http\Controllers\laporanController::class,'index'])->name('laporan');
     Route::post('/get-laporan',[App\Http\Controllers\laporanController::class,'getlaporan']);
+    Route::post('/export-laporan',[App\Http\Controllers\laporanController::class,'export']);
 });

@@ -5,11 +5,10 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Transaksi</h2>
+                    <h2>Generate Laporan</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a></li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
-                        <li class="breadcrumb-item active">Transaksi</li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Bite Laundry</a></li>
+                        <li class="breadcrumb-item active">Laporan</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
                             class="zmdi zmdi-sort-amount-desc"></i></button>
@@ -24,14 +23,14 @@
         <div class="container-fluid">
             <!-- Basic Examples -->
             <div class="row clearfix">
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-4 col-12">
                     <div class="card">
                         <div class="body">
                             <h3>Filter Data</h3>
                             <form action="" id="lapor">
                                 <div class="mb-3">
-                                    <label for="id_outlet">Pilih Outlet</label>
-                                    <select name="id_outlet" class="form-control show-tick" id="pilihoutlet">
+                                    <label for="outlet">Pilih Outlet</label>
+                                    <select name="outlet" class="form-control show-tick" id="pilihoutlet">
                                     <option value="">Pilih outlet</option>
                                     @foreach ($outlets as $item)
                                     <option value="{{$item->id}}">{{$item->nama}}</option>
@@ -68,38 +67,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 border-primary">
+                <div class="col-lg-8 col-12 border-primary">
                     <div class="card">
                         <div class="body">
-                            <div class=""id="selected_paket"></div>
                             <h3 py-3>Hasil Filter</h3>
-                            <div class="table-responsive" id="laporanresult">
-                                {{-- <table class="table bordered table-striped table-hover">
+                            <div class="my-4" id="export"></div>
+                            <div class="table-responsive">
+                                <table class="table bordered table-striped table-hover dataTable">
                                     <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama</th>
-                                            <th>jumlah</th>
-                                            <th>harga</th>
-                                            <th>aksi</th>
+                                        <tr id="thead">
+                                        
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        @foreach ($details as $detail)
-                                            <tr>
-                                                <td>{{$loop->iteration}}</td>
-                                                <td>{{ $detail->paket->nama }}</td>
-                                                <td>{{$detail->qty}}</td>
-                                                <td>Rp.{{ number_format($detail->paket->harga,0,',','.') }}</td>
-                                                <td colspan="2">
-                                                    <form method="post" id="delete" class="delete" data-route="/hapus-paket-transaksi/{{$detail->id}}">
-                                                        <button type="submit" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                        @endforeach
+                                    <tbody id="laporanresult">
+                                        
                                     </tbody>
-                                </table> --}}
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -114,6 +97,7 @@
     <script>
         $(document).ready(function(){
            $("#lapor").on('submit',function(e){
+            e.preventDefault();
             $.ajax({
                     type: 'post',
                     url: '/get-laporan',
@@ -122,10 +106,45 @@
                     },
                     data:$("#lapor").serializeArray(),
                     success: function (data) {
-                    $('#laporanresult').load(document.URL + ' #laporanresult');
+                    $('#export').html(data.export);
+                    $('#thead').html(data.thead);
+                    $('#laporanresult').html(data.result);
                     }
                 });
            }); 
+                //    $("#exporter").on('submit',function(e){
+                //     e.preventDefault();
+                //     $.ajax({
+                //             type: 'post',
+                //             url: '/export-laporan',
+                //             data:$("#exporter").serializeArray(),
+                //             success: function (data) {
+                //             // $('#export').html(data.export);
+                //             // $('#thead').html(data.thead);
+                //             // $('#laporanresult').html(data.result);
+                //             }
+                //         });
+                //    });
+
+            // function export(outlet,status,date_from,date_to)
+            // {
+            //     $.ajax({
+            //             type: 'post',
+            //             url: '/export-laporan',
+            //             data:{
+            //                 'outlet':outlet,
+            //                 'status':status,
+            //                 'tanggal_awal':date_from,
+            //                 'tanggal_akhir': date_to
+            //             },
+            //             success: function (data) {
+            //             // $('#export').html(data.export);
+            //             // $('#thead').html(data.thead);
+            //             // $('#laporanresult').html(data.result);
+            //             }
+            //         });
+            // }
         });
+
     </script>
 @endsection

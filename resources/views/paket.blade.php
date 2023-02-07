@@ -5,11 +5,10 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Jquery DataTables</h2>
+                    <h2>Paket Laundry</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a></li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
-                        <li class="breadcrumb-item active">Normal Tables</li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Bite Laundry</a></li>
+                        <li class="breadcrumb-item active">Daftar Paket</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
@@ -73,7 +72,7 @@
                         </div>
                         <div class="body">
                             <div class="table-responsive" id="datapkt">
-                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -100,7 +99,7 @@
                                             </td>
                                             <td colspan="2">
                                                 <button type="button" class="btn btn-default waves-effect m-r-20" data-toggle="modal"
-                            data-target="#editpaket{{$pkt->id}}"><i class="zmdi zmdi-edit"></i><</button>
+                            data-target="#editpaket{{$pkt->id}}"><i class="zmdi zmdi-edit"></i></button>
                             {{-- modal untuk mrnambah paket --}}
                         <div class="modal fade" id="editpaket{{$pkt->id}}" tabindex="-1" role="dialog">
                             <div class="modal-dialog" role="document">
@@ -172,7 +171,7 @@
                         </div>
                                                 <form method="post" id="deletepkt" class="deletepkt" data-route="/paket/{{$pkt->id}}">
                                                     @method('destroy')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i><</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i></button>
                                                 </form>
                                             </td>
                                         </tr>

@@ -8,7 +8,7 @@
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <title>Bite Laundry</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+<link rel="icon" href="/assets/images/logo.jpg" type="image/x-icon"> <!-- Favicon-->
 <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
 <link rel="stylesheet" href="/assets/plugins/charts-c3/plugin.css"/>

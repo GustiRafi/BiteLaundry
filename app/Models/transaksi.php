@@ -20,4 +20,8 @@ class transaksi extends Model
     {
         return $this->hasOne(member::class,'id','id_member');
     }
+    public function outlet()
+    {
+        return $this->hasOne(outlet::class,'id','id_outlet');
+    }
 }
