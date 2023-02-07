@@ -3,6 +3,9 @@
 namespace App\Observers;
 
 use App\Models\transaksi;
+use App\Models\log;
+use App\Models\log_transaksi;
+use Illuminate\Support\Facades\Auth;
 
 class TransaksiObserver
 {
@@ -20,6 +23,12 @@ class TransaksiObserver
             'log' => 'Transaksi baru telah dibuat oleh '.Auth::user()->name ,
             'id_user' => Auth::user()->id,
         ]);
+
+        log_transaksi::create([
+            'kode_invoice' => $transaksi->kode_invoice,
+            'status' => $transaksi->status,
+            'log' => 'Transaksi baru telah dibuat oleh '.Auth::user()->name 
+        ]);
     }
 
     /**
@@ -30,7 +39,11 @@ class TransaksiObserver
      */
     public function updated(transaksi $transaksi)
     {
-        //
+        log_transaksi::create([
+            'kode_invoice' => $transaksi->kode_invoice,
+            'status' => $transaksi->status,
+            'log' => 'Status Laundry telah diperbarui oleh '.Auth::user()->name 
+        ]);
     }
 
     /**
@@ -41,7 +54,11 @@ class TransaksiObserver
      */
     public function deleted(transaksi $transaksi)
     {
-        //
+        log_transaksi::create([
+            'kode_invoice' => $transaksi->kode_invoice,
+            'status' => 'sudah diambil',
+            'log' => 'Status Laundry telah diambil'
+        ]);
     }
 
     /**

@@ -143,10 +143,10 @@ class transaksiController extends Controller
 
         if($req->status == 'diambil')
         {
-            transaksi::where('id',$id)->delete();
+            transaksi::where('id',$id)->first()->delete();
             return redirect()->back()->with('success','Laundry ' . $transaksi->kode_invoice . ' baru saja diambil');
         }else{
-            transaksi::where('id',$id)->update($data);
+            transaksi::where('id',$id)->first()->update($data);
             return redirect()->back()->with('success','Laundry ' . $transaksi->kode_invoice . ' sedang dalam proses selanjutnya');
         }
 

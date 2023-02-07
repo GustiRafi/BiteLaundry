@@ -3,6 +3,8 @@
 namespace App\Observers;
 
 use App\Models\paket;
+use App\Models\log;
+use Illuminate\Support\Facades\Auth;
 
 class paketObserver
 {

@@ -3,6 +3,8 @@
 namespace App\Observers;
 
 use App\Models\member;
+use App\Models\log;
+use Illuminate\Support\Facades\Auth;
 
 class memberObserver
 {
