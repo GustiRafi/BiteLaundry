@@ -15,7 +15,7 @@ class outletController extends Controller
     public function index()
     {
         return view('outlet',[
-            'outlets' => outlet::all(),
+            'outlets' => outlet::orderBy('id','desc')->get(),
         ]);
     }
 

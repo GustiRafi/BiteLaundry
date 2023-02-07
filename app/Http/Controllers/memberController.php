@@ -15,7 +15,7 @@ class memberController extends Controller
     public function index()
     {
         return view('member',[
-            'members' => member::all(),
+            'members' => member::orderBy('id','desc')->get(),
         ]);
     }
 

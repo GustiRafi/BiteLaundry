@@ -30,11 +30,11 @@ class HomeController extends Controller
     public function index()
     {
         return view('home',[
-            'user' => user::all(),
-            'outlet' => outlet::all(),
-            'paket' => paket::all(),
-            'member' => member::all(),
-            'transaksi' => transaksi::all(),
+            'user' => user::orderBy('id','desc')->get(),
+            'outlet' => outlet::orderBy('id','desc')->get(),
+            'paket' => paket::orderBy('id','desc')->get(),
+            'member' => member::orderBy('id','desc')->get(),
+            'transaksi' => transaksi::orderBy('id','desc')->get(),
             'log' => log::orderBy('id','desc')->get(),
         ]);
     }

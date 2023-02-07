@@ -12,7 +12,7 @@ class laporanController extends Controller
     public function index()
     {
         return view('laporan',[
-            'outlets' => outlet::all()
+            'outlets' => outlet::orderBy('id','desc')->get()
         ]);
     }
 

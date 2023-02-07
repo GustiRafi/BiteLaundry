@@ -16,8 +16,8 @@ class paketController extends Controller
     public function index()
     {
         return view('paket',[
-            'pakets' => paket::all(),
-            'outlets' => outlet::all(),
+            'pakets' => paket::orderBy('id','desc')->get(),
+            'outlets' => outlet::orderBy('id','desc')->get(),
         ]);
     }
 
