@@ -9,6 +9,7 @@
     <meta name="author" content="">
 
     <title>Bite Laundry</title>
+    <link rel="icon" href="/assets/images/logo.jpg" type="image/x-icon"> <!-- Favicon-->
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- CSS FILES -->
@@ -50,17 +51,6 @@ https://templatemo.com/tm-584-pod-talk
                 </a>
                 <h5 class="text-white">Bite Laundry</h5>
 
-                {{-- <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
-                    <div class="input-group input-group-lg">
-                        <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast"
-                            aria-label="Search">
-
-                        <button type="submit" class="form-control" id="submit">
-                            <i class="bi-search"></i>
-                        </button>
-                    </div>
-                </form> --}}
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -75,9 +65,11 @@ https://templatemo.com/tm-584-pod-talk
                         <li class="nav-item">
                             <a class="nav-link" href="#cek">Cek Status</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="#About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Outlet">Outlet</a>
                         </li>
                     </ul>
 
@@ -101,171 +93,6 @@ https://templatemo.com/tm-584-pod-talk
 
                             {{-- <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start listening</a> --}}
                         </div>
-
-                        {{-- <div class="owl-carousel owl-theme">
-                            <div class="owl-carousel-info-wrap item">
-                                <img src="/landing/images/profile/smiling-business-woman-with-folded-hands-against-white-wall-toothy-smile-crossed-arms.jpg"
-                                    class="owl-carousel-image img-fluid" alt="">
-
-                                <div class="owl-carousel-info">
-                                    <h4 class="mb-2">
-                                        Candice
-                                        <img src="/landing/images/verified.png" class="owl-carousel-verified-image img-fluid"
-                                            alt="">
-                                    </h4>
-
-                                    <span class="badge">Storytelling</span>
-
-                                    <span class="badge">Business</span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-twitter"></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-facebook"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="owl-carousel-info-wrap item">
-                                <img src="/landing/images/profile/handsome-asian-man-listening-music-through-headphones.jpg"
-                                    class="owl-carousel-image img-fluid" alt="">
-
-                                <div class="owl-carousel-info">
-                                    <h4 class="mb-2">
-                                        William
-                                        <img src="/landing/images/verified.png" class="owl-carousel-verified-image img-fluid"
-                                            alt="">
-                                    </h4>
-
-                                    <span class="badge">Creative</span>
-
-                                    <span class="badge">Design</span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-twitter"></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-facebook"></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-pinterest"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="owl-carousel-info-wrap item">
-                                <img src="/landing/images/profile/cute-smiling-woman-outdoor-portrait.jpg"
-                                    class="owl-carousel-image img-fluid" alt="">
-
-                                <div class="owl-carousel-info">
-                                    <h4 class="mb-2">Taylor</h4>
-
-                                    <span class="badge">Modeling</span>
-
-                                    <span class="badge">Fashion</span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-twitter"></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-facebook"></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-pinterest"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="owl-carousel-info-wrap item">
-                                <img src="/landing/images/profile/man-portrait.jpg" class="owl-carousel-image img-fluid" alt="">
-
-                                <div class="owl-carousel-info">
-                                    <h4 class="mb-2">Nick</h4>
-
-                                    <span class="badge">Acting</span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-instagram"></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-youtube"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="owl-carousel-info-wrap item">
-                                <img src="/landing/images/profile/woman-posing-black-dress-medium-shot.jpg"
-                                    class="owl-carousel-image img-fluid" alt="">
-
-                                <div class="owl-carousel-info">
-                                    <h4 class="mb-2">
-                                        Elsa
-                                        <img src="/landing/images/verified.png" class="owl-carousel-verified-image img-fluid"
-                                            alt="">
-                                    </h4>
-
-                                    <span class="badge">Influencer</span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-instagram"></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-youtube"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="owl-carousel-info-wrap item">
-                                <img src="/landing/images/profile/smart-attractive-asian-glasses-male-standing-smile-with-freshness-joyful-casual-blue-shirt-portrait-white-background.jpg"
-                                    class="owl-carousel-image img-fluid" alt="">
-
-                                <div class="owl-carousel-info">
-                                    <h4 class="mb-2">Chan</h4>
-
-                                    <span class="badge">Education</span>
-                                </div>
-
-                                <div class="social-share">
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-linkedin"></a>
-                                        </li>
-
-                                        <li class="social-icon-item">
-                                            <a href="#" class="social-icon-link bi-whatsapp"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
 
                 </div>
@@ -297,97 +124,16 @@ https://templatemo.com/tm-584-pod-talk
                     </div>
 
                     <div class="col-12 col-lg-12 mt-4">
-                        <div class="" id="statuslaundry">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <section class="topics-section section-padding pb-0" id="section_3">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12">
-                        <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Topics</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.html" class="custom-block-image-wrap">
-                                <img src="/landing/images/topics/physician-consulting-his-patient-clinic.jpg"
-                                    class="custom-block-image img-fluid" alt="">
-                            </a>
-
-                            <div class="custom-block-info custom-block-overlay-info">
-                                <h5 class="mb-1">
-                                    <a href="listing-page.html">
-                                        Productivity
-                                    </a>
-                                </h5>
-
-                                <p class="badge mb-0">50 Episodes</p>
+                        <div class="row">
+                            <div class="col-12 col-lg-6" id="statuslaundry">
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.html" class="custom-block-image-wrap">
-                                <img src="/landing/images/topics/repairman-doing-air-conditioner-service.jpg"
-                                    class="custom-block-image img-fluid" alt="">
-                            </a>
-
-                            <div class="custom-block-info custom-block-overlay-info">
-                                <h5 class="mb-1">
-                                    <a href="listing-page.html">
-                                        Technician
-                                    </a>
-                                </h5>
-
-                                <p class="badge mb-0">12 Episodes</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.html" class="custom-block-image-wrap">
-                                <img src="/landing/images/topics/woman-practicing-yoga-mat-home.jpg"
-                                    class="custom-block-image img-fluid" alt="">
-                            </a>
-
-                            <div class="custom-block-info custom-block-overlay-info">
-                                <h5 class="mb-1">
-                                    <a href="listing-page.html">
-                                        Mindfullness
-                                    </a>
-                                </h5>
-
-                                <p class="badge mb-0">35 Episodes</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.html" class="custom-block-image-wrap">
-                                <img src="/landing/images/topics/delicious-meal-with-sambal-arrangement.jpg"
-                                    class="custom-block-image img-fluid" alt="">
-                            </a>
-
-                            <div class="custom-block-info custom-block-overlay-info">
-                                <h5 class="mb-1">
-                                    <a href="listing-page.html">
-                                        Cooking
-                                    </a>
-                                </h5>
-
-                                <p class="badge mb-0">12 Episodes</p>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3" id="title"></div>
+                                <table class="table table-responsive table-striped table-hover">
+                                    <thead id="thead"></thead>
+                                    <tbody id="log">
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -397,183 +143,50 @@ https://templatemo.com/tm-584-pod-talk
         </section>
 
 
-        <section class="trending-podcast-section section-padding">
+        <section class="topics-section section-padding pb-0" id="About">
             <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12">
-                        <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Trending episodes</h4>
+                <h5>Tentang Kami</h5>
+                <div class="card border-0 my-3">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="/assets/images/logo.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Bite Laundry</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem maiores, nesciunt qui aut voluptate hic ab dignissimos possimus perferendis! Velit ut laborum repudiandae accusamus sapiente reiciendis, eum unde quod veritatis.</p>
+                          <p class="card-text"><small class="text-muted">Solusi malas nyuci!!</small></p>
                         </div>
+                      </div>
                     </div>
+                  </div>
+            </div>
+        </section>
 
-                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block custom-block-full">
-                            <div class="custom-block-image-wrap">
-                                <a href="detail-page.html">
-                                    <img src="/landing/images/podcast/27376480_7326766.jpg" class="custom-block-image img-fluid"
-                                        alt="">
-                                </a>
-                            </div>
 
-                            <div class="custom-block-info">
-                                <h5 class="mb-2">
-                                    <a href="detail-page.html">
-                                        Vintage Show
-                                    </a>
-                                </h5>
-
-                                <div class="profile-block d-flex">
-                                    <img src="/landing/images/profile/woman-posing-black-dress-medium-shot.jpg"
-                                        class="profile-block-image img-fluid" alt="">
-
-                                    <p>Elsa
-                                        <strong>Influencer</strong>
-                                    </p>
-                                </div>
-
-                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                    <a href="#" class="bi-headphones me-1">
-                                        <span>100k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-heart me-1">
-                                        <span>2.5k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-chat me-1">
-                                        <span>924k</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="social-share d-flex flex-column ms-auto">
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-heart"></i>
-                                </a>
-
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-bookmark"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block custom-block-full">
-                            <div class="custom-block-image-wrap">
-                                <a href="detail-page.html">
-                                    <img src="/landing/images/podcast/27670664_7369753.jpg" class="custom-block-image img-fluid"
-                                        alt="">
-                                </a>
-                            </div>
-
-                            <div class="custom-block-info">
-                                <h5 class="mb-2">
-                                    <a href="detail-page.html">
-                                        Vintage Show
-                                    </a>
-                                </h5>
-
-                                <div class="profile-block d-flex">
-                                    <img src="/landing/images/profile/cute-smiling-woman-outdoor-portrait.jpg"
-                                        class="profile-block-image img-fluid" alt="">
-
-                                    <p>
-                                        Taylor
-                                        <img src="/landing/images/verified.png" class="verified-image img-fluid" alt="">
-                                        <strong>Creator</strong>
-                                    </p>
-                                </div>
-
-                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                    <a href="#" class="bi-headphones me-1">
-                                        <span>100k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-heart me-1">
-                                        <span>2.5k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-chat me-1">
-                                        <span>924k</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="social-share d-flex flex-column ms-auto">
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-heart"></i>
-                                </a>
-
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-bookmark"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12">
-                        <div class="custom-block custom-block-full">
-                            <div class="custom-block-image-wrap">
-                                <a href="detail-page.html">
-                                    <img src="/landing/images/podcast/12577967_02.jpg" class="custom-block-image img-fluid"
-                                        alt="">
-                                </a>
-                            </div>
-
-                            <div class="custom-block-info">
-                                <h5 class="mb-2">
-                                    <a href="detail-page.html">
-                                        Daily Talk
-                                    </a>
-                                </h5>
-
-                                <div class="profile-block d-flex">
-                                    <img src="/landing/images/profile/handsome-asian-man-listening-music-through-headphones.jpg"
-                                        class="profile-block-image img-fluid" alt="">
-
-                                    <p>
-                                        William
-                                        <img src="/landing/images/verified.png" class="verified-image img-fluid" alt="">
-                                        <strong>Vlogger</strong>
-                                    </p>
-                                </div>
-
-                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                    <a href="#" class="bi-headphones me-1">
-                                        <span>100k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-heart me-1">
-                                        <span>2.5k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-chat me-1">
-                                        <span>924k</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="social-share d-flex flex-column ms-auto">
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-heart"></i>
-                                </a>
-
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-bookmark"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+        <section class="trending-podcast-section section-padding" id="Outlet">
+            <div class="container">
+                <h5>Outlet Kami</h5>
+                <table class="table mt-3 table-responsive">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">No Telp</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($outlets as $item)                            
+                            <tr>
+                            <th scope="row">{{$loop->iteration}}</th>
+                            <td>{{$item->nama}}</td>
+                            <td>{{$item->alamat}}</td>
+                            <td>{{$item->telp}}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                  </table>
             </div>
         </section>
     </main>
@@ -691,7 +304,10 @@ https://templatemo.com/tm-584-pod-talk
                         'kode': $("#kode").val(),
                   },
                   success: function (data) {
-                    $('#statuslaundry').html(data.info)
+                    $('#statuslaundry').html(data.info);
+                    $('#thead').html(data.thead);
+                    $('#log').html(data.tbody);
+                    $('#title').html(data.title);
                   }
               });
             });
