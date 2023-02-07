@@ -35,7 +35,7 @@ class HomeController extends Controller
             'paket' => paket::all(),
             'member' => member::all(),
             'transaksi' => transaksi::all(),
-            'log' => log::all(),
+            'log' => log::orderBy('id','desc')->get(),
         ]);
     }
 }

@@ -103,7 +103,7 @@ class outletController extends Controller
     {
         $outlet = outlet::find($id);
         $name = $outlet->nama;
-        outlet::Where('id',$id)->delete();
+        outlet::Where('id',$id)->first()->delete();
 
         return response($name);
     }

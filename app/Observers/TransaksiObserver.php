@@ -14,7 +14,12 @@ class TransaksiObserver
      */
     public function created(transaksi $transaksi)
     {
-        //
+        log::create([
+            'model' => 'Transaksi',
+            'action' => 'Create',
+            'log' => 'Transaksi baru telah dibuat oleh '.Auth::user()->name ,
+            'id_user' => Auth::user()->id,
+        ]);
     }
 
     /**

@@ -90,7 +90,7 @@ class memberController extends Controller
         $mbr = member::find($id);
         $nama = $mbr->nama;
 
-        member::where('id',$id)->update($validate);
+        member::where('id',$id)->first()->update($validate);
 
         return response($nama);
     }
@@ -106,7 +106,7 @@ class memberController extends Controller
         $mbr = member::find($id);
         $nama = $mbr->nama;
 
-        member::where("id",$id)->delete();
+        member::where("id",$id)->first()->delete();
 
         return response($nama);
     }

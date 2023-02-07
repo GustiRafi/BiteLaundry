@@ -46,7 +46,7 @@ class UserObserver
         log::create([
             'model' => 'User',
             'action' => 'delete',
-            'log' => 'user dihapus oleh ' .Auth::user()->name,
+            'log' => 'user '.$user->name.' dihapus oleh ' .Auth::user()->name,
             'id_user' => Auth::user()->id,
         ]);
     }

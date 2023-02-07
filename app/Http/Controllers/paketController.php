@@ -92,7 +92,7 @@ class paketController extends Controller
         $pkt = paket::find($id);
         $nama = $pkt->nama;
 
-        paket::where('id',$id)->update($validate);
+        paket::where('id',$id)->first()->update($validate);
 
         return response($nama);
     }
@@ -108,7 +108,7 @@ class paketController extends Controller
         $pkt = paket::find($id);
         $nama = $pkt->nama;
 
-        paket::where('id',$id)->delete();
+        paket::where('id',$id)->first()->delete();
 
         return response($nama);
     }

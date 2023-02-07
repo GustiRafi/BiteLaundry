@@ -16,7 +16,12 @@ class OutletObserver
      */
     public function created(outlet $outlet)
     {
-        //
+        log::create([
+            'model' => 'Outlet',
+            'action' => 'Create',
+            'log' => 'Outlet Baru di tambahkan oleh '.Auth::user()->name,
+            'id_user' => Auth::user()->id,
+        ]);
     }
 
     /**
@@ -30,7 +35,7 @@ class OutletObserver
         log::create([
             'model' => 'Outlet',
             'action' => 'update',
-            'log' => 'Outlet di edit oleh '.Auth::user()->name ,
+            'log' => 'Outlet '.$outlet->nama.' di edit oleh '.Auth::user()->name ,
             'id_user' => Auth::user()->id,
         ]);
     }
@@ -43,7 +48,12 @@ class OutletObserver
      */
     public function deleted(outlet $outlet)
     {
-        //
+        log::create([
+            'model' => 'Outlet',
+            'action' => 'Delete',
+            'log' => 'Outlet '.$outlet->nama.' di hapus oleh '.Auth::user()->name ,
+            'id_user' => Auth::user()->id,
+        ]);
     }
 
     /**
